@@ -492,119 +492,151 @@
           </ul>
         </div>
         <div class="subscribe">
-          <h3 class="text-subscribe">suscribase al boletin informativo</h3>
-          <form class="form" name="signup_form" autocomplete="on" novalidate>
-            <label>
-              <input
-                class="input input-email"
-                type="email"
-                name="email"
-                placeholder="Correo Electrónico"
-                class="text-placeholder"
-                pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
-                size="40"
-                required
-              />
-            </label>
-            <button class="button-subscribe" type="submit">
-              Suscribe
-              <svg class="icon-subscribe" width="24" height="24">
-                <use href="./images/symbol-defs.svg#icon-airplane"></use>
-              </svg>
-            </button>
-          </form>
+          <p class="text-subscribe">subscribe to the newsletter</p>
+          <div class="content-subscribe">
+            <form class="form" name="signup_form" autocomplete="on" novalidate>
+              <div>
+                <label>
+                  <input
+                    class="input input-email"
+                    type="email"
+                    name="email"
+                    placeholder="E-mail"
+                    class="text-placeholder"
+                    pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+                    size="40"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="button-send-email">
+                <button class="button-subscribe" type="submit">
+                  <span class="text-subscribe-button"> Subscribe </span>
+                  <div>
+                    <svg class="icon-subscribe" width="24" height="24">
+                      <use href="./images/symbol-defs.svg#icon-airplane"></use>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <div>
-          <h3 class="text-modal">
-            Deje sus datos, nos contactaremos con usted
-          </h3>
+        <div class="input-information">
+          <form>
+            <div class="text-modal">
+              <p>Put your information, we will contact you</p>
+            </div>
+            <div class="container-subscribe">
+              <form
+                class="form"
+                name="signup_form"
+                autocomplete="on"
+                novalidate
+              >
+                <label class="form-label form-label-person">
+                  <div class="form-label form-label-person">
+                    Name
+                    <input
+                      class="input form-input"
+                      type="text"
+                      name="username"
+                      placeholder="Jacob Mercer"
+                      pattern="[A-Za-zbr />]{1,40}"
+                      minlength="3"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <svg class="icon-person" width="18" height="18">
+                      <use href="./images/symbol-defs.svg#icon-person"></use>
+                    </svg>
+                  </div>
+                </label>
+
+                <label class="form-label form-label-tel">
+                  <div class="form-label form-label-tel">
+                    Phone
+                    <input
+                      class="input form-input"
+                      type="number"
+                      name="telefono"
+                      placeholder="3124568754"
+                      min="3000000000"
+                      max="3999999999"
+                      pattern="/^([0-9])*$/"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <svg class="icon-tel" width="18" height="18">
+                      <use href="./images/symbol-defs.svg#icon-cellphone"></use>
+                    </svg>
+                  </div>
+                </label>
+
+                <label class="form-label form-label-email">
+                  <div class="form-label form-label-email">
+                    E-mail
+                    <input
+                      class="input form-input"
+                      type="email"
+                      name="email"
+                      placeholder="xxxxxxxxx@xxxxxx.xx"
+                      pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+                      size="40"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <svg class="icon-email" width="18" height="18">
+                      <use href="./images/symbol-defs.svg#icon-e-mail"></use>
+                    </svg>
+                  </div>
+                </label>
+              </form>
+
+              <div>
+                <form name="signup_form" autocomplete="off" novalidate>
+                  <label class="form-label">
+                    Comment
+                    <textarea
+                      class="form-input-text"
+                      name="feedback"
+                      placeholder="Enter your text"
+                    ></textarea>
+                  </label>
+                </form>
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="container-subscribe">
-          <div class="container-information-subscribe">
-            <div></div>
-
-            <form class="form" name="signup_form" autocomplete="on" novalidate>
-              <label class="form-label form-label-person">
-                <span class="name-input">Nombre</span>
-
-                <input
-                  class="input form-input"
-                  type="text"
-                  name="username"
-                  placeholder="Jacob Mercer"
-                  pattern="[A-Za-zbr />]{1,40}"
-                  minlength="3"
-                  required
-                />
-                <svg class="form-label icon-person" width="18" height="18">
-                  <use href="./images/symbol-defs.svg#icon-person"></use>
+        <div class="container-terms">
+          <div>
+            <label class="checkbox">
+              <input class="checkbox" type="checkbox" name="checkbox" />
+              <div class="icon-checkbox">
+                <svg class="icon-checkbox" width="18" height="18">
+                  <use href="./images/symbol-defs.svg#icon-cono-revisado"></use>
                 </svg>
-              </label>
-
-              <label class="form-label form-label-tel">
-                <span class="name-input">Teléfono</span>
-                <input
-                  class="input form-input"
-                  type="number"
-                  name="telefono"
-                  placeholder="3124568754"
-                  min="3000000000"
-                  max="3999999999"
-                  pattern="/^([0-9])*$/"
-                  required
-                />
-                <svg class="icon-tel" width="18" height="18">
-                  <use href="./images/symbol-defs.svg#icon-cellphone"></use>
-                </svg>
-              </label>
-
-              <label class="form-label form-label-email">
-                <span class="name-input">E-mail</span>
-                <input
-                  class="input form-input"
-                  type="email"
-                  name="email"
-                  placeholder="xxxxxxxxx@xxxxxx.xx"
-                  pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
-                  size="40"
-                  required
-                />
-                <svg class="icon-email" width="18" height="18">
-                  <use href="./images/symbol-defs.svg#icon-e-mail"></use>
-                </svg>
-              </label>
-            </form>
-            <p class="name-input">Comentarios</p>
-
-            <form name="signup_form" autocomplete="off" novalidate>
-              <label>
-                <textarea
-                  class="form-input-text"
-                  name="feedback"
-                  placeholder="Introduzca el texto"
-                ></textarea>
-              </label>
-            </form>
-          </div>
-          <div class="container-terms">
-            <label>
-              <input type="checkbox" name="hobby" value="sports" checked />
-
-              <span class="modal-terms">
-                Estoy de acuerdo con el boletín informativo y acepto los
-                Términos y Condiciones
-              </span>
+              </div>
             </label>
           </div>
-
           <div>
-            <button class="button-subscribe" type="submit">Enviar</button>
+            <span class="modal-terms">
+              I am agree with the newsletter and accept the Terms and Conditions
+            </span>
           </div>
         </div>
+
+        <div>
+          <button class="button-subscribe" type="submit">Send</button>
+        </div>
+
         <button data-modal-close class="button-exit" type="button">
           <svg width="30" height="30">
             <use href="./images/symbol-defs.svg#icon-close-1"></use>

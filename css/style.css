@@ -288,20 +288,20 @@ p {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
 }
+.input-information {
+  padding-top: 38.5px;
+}
 .text-modal {
-  margin-top: 0;
-  font-style: Bold;
   font-size: 20px;
-  line-height: 23px;
-  line-height: 100%;
+  line-height: 1.1;
   text-align: Center;
   width: 448px;
-  height: 23px;
-  padding-top: 40px;
-  margin-bottom: 12px;
+  margin-bottom: 0;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
 .button-exit {
   position: absolute;
@@ -329,26 +329,26 @@ p {
 }
 .container-subscribe {
   width: 448px;
-  height: 342px;
-  display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 .form {
   width: 100%;
 }
-.container-information-subscribe {
-  margin-bottom: 20px;
-}
+
 .form-label {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: Left;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--primary-enlace-color);
+  margin-bottom: 12px;
+  fill: var(--primary-text-color);
 }
 .form-label:focus-within {
-  color: #2196f3;
-  fill: #2196f3;
+  fill: var(--brand-color);
 }
 .form-label-person {
   position: relative;
@@ -356,8 +356,8 @@ p {
 
 .icon-person {
   position: absolute;
-  top: 37px;
-  left: 12px;
+  top: 25px;
+  left: 15px;
 }
 
 .form-label-tel {
@@ -365,35 +365,26 @@ p {
 }
 .icon-tel {
   position: absolute;
-  top: 37px;
-  left: 12px;
+  top: 25px;
+  left: 15px;
 }
 .form-label-email {
   position: relative;
 }
 .icon-email {
   position: absolute;
-  top: 37px;
-  left: 12px;
+  top: 25px;
+  left: 15px;
 }
 
-.name-input {
-  font-size: 12px;
-  line-height: 14px;
-  line-height: 100%;
-  text-align: Left;
-  letter-spacing: 0.01em;
-  color: var(--primary-enlace-color);
-  margin-left: 0;
-  margin-bottom: 4px;
-  margin-top: 10px;
-}
 .form-input-text {
   width: 448px;
   height: 120px;
   border-radius: 4px;
   border-color: var(--primary-text-color);
   padding: 12px 16px 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  cursor: pointer;
 }
 .form-input-text:focus-within {
   border-color: var(--brand-color);
@@ -404,33 +395,51 @@ p {
   justify-content: flex-start;
   font-size: 2px;
 }
+textarea {
+  resize: none;
+}
 
 .container-terms {
-  width: 425px;
-  height: 48px;
-  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 423px;
+  gap: 10px;
 }
+
+.icon-checkbox {
+  position: absolute;
+}
+
+.icon-checkbox {
+  fill: var(--primary-white-color);
+  stroke: var(--primary-enlace-color);
+}
+.icon-checkbox:active {
+  fill: greenyellow;
+}
+
 .modal-terms {
-  font-style: Regular;
-  font-size: 14px;
-  line-height: 24px;
-  line-height: 146%;
-  text-align: Left;
   color: var(--primary-enlace-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
 }
 .form-input {
   padding: 8px;
   border: 1px solid #2a2a2a;
-  border-radius: 4px;
   font-family: inherit;
   font-size: 16px;
   outline: none;
   width: 448px;
   height: 40px;
-  stroke: Solid rgba(33, 33, 33, 0.2);
-  border-color: #212121;
   text-indent: 50px;
-  gap: 30px;
+  gap: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
 }
 .form-input:not(:placeholder-shown):required:valid {
   border-color: green;
@@ -814,9 +823,9 @@ p {
 }
 .subscribe {
   margin-left: auto;
+  height: 86px;
 }
 .text-subscribe {
-  font-style: Bold;
   font-size: 14px;
   line-height: 1.2;
   line-height: 100%;
@@ -826,16 +835,23 @@ p {
   text-transform: uppercase;
   width: 275px;
 }
+.content-subscribe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 .input-email {
   width: 358px;
   height: 50px;
-  stroke: Solid rgba(255, 255, 255, 0.3);
   background-color: transparent;
-  fill: Solid rgba(255, 255, 255, 0.6);
   color: var(--primary-white-color);
   border-radius: 4px;
-  offset: 0px, 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
 }
+
 .input:not(:placeholder-shown):required:valid {
   border-color: green;
 }
@@ -847,7 +863,7 @@ p {
   border-color: var(--brand-color);
 }
 .input:focus-within .icon-person {
-  fill: #2196f3;
+  fill: var(--brand-color);
 }
 
 .text-placeholder {
@@ -856,29 +872,48 @@ p {
   line-height: 107%;
   text-align: Left;
 }
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .button-subscribe {
+  position: relative;
   width: 200px;
   height: 50px;
   padding: 0;
   border: 0;
   background-color: var(--brand-color);
   color: var(--primary-white-color);
-  font-style: Bold;
-  font-size: 16px;
-  line-height: 30px;
-  line-height: 160%;
-  text-align: Center;
-  vertical-align: Center;
-  letter-spacing: 0.06em;
-  position: relative;
-  margin-left: 10px;
   border-radius: 4px;
-  offset: 0px, 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-left: 12px;
+  cursor: pointer;
 }
+.text-subscribe-button {
+  position: absolute;
+  width: 89px;
+  height: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+}
+
 .icon-subscribe {
   position: absolute;
   top: 13px;
-  right: 13px;
+  right: 23px;
 }
 
 .list.portfolio {
