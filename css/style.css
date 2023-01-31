@@ -346,6 +346,9 @@ p {
   color: var(--primary-enlace-color);
   margin-bottom: 12px;
   fill: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-label:focus-within {
   fill: var(--brand-color);
@@ -402,29 +405,48 @@ textarea {
 .container-terms {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 423px;
   gap: 10px;
 }
+.check-input {
+  display: none;
+}
 .checkbox {
   width: 16px;
-  height: 15px;
-  background-color: var(--brand-color);
+  height: 16px;
+  border: 2px solid var(--primary-text-color);
   border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  fill: transparent;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 22px;
 }
 
-.icon-checkbox {
+.checkbox svg {
+  width: 16px;
+  height: 16px;
+}
+.check-input:checked + .checkbox {
+  background: var(--brand-color);
+  border: 2px solid var(--brand-color);
+}
+
+.checkbox::before {
+  content: '';
+  background: var(--brand-color);
   position: absolute;
-  fill: var(--brand-color);
-}
-.checkbox:active .icon-checkbox {
-  fill: greenyellow;
+  border-radius: 2px;
+  transform: scale(0);
+  display: block;
+  z-index: -1;
 }
 
-.input:checked .svg {
-  fill: red;
-}
 .modal-terms {
   color: var(--primary-enlace-color);
   font-weight: 400;
@@ -845,6 +867,8 @@ textarea {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-email {
   width: 358px;
