@@ -291,7 +291,14 @@ p {
   justify-content: center;
 }
 .input-information {
-  padding-top: 38.5px;
+  padding-top: 40px;
+}
+.input-information-subscribe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
 }
 .text-modal {
   font-size: 20px;
@@ -302,6 +309,9 @@ p {
   font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+.title-text-modal {
+  margin-bottom: 12px;
 }
 .button-exit {
   position: absolute;
@@ -334,7 +344,11 @@ p {
   justify-content: center;
 }
 .form {
-  width: 100%;
+  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-label {
@@ -344,12 +358,15 @@ p {
   font-weight: 400;
   letter-spacing: 0.01em;
   color: var(--primary-enlace-color);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   fill: var(--primary-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.comment {
+  margin-bottom: 0;
+}
+
 .form-label:focus-within {
   fill: var(--brand-color);
 }
@@ -388,10 +405,15 @@ p {
   padding: 12px 16px 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   cursor: pointer;
+  margin-left: 0;
 }
 .form-input-text:focus-within {
   border-color: var(--brand-color);
   outline: 0 none;
+}
+.comment {
+  display: flex;
+  flex-direction: column;
 }
 
 .text-comment {
@@ -401,15 +423,15 @@ p {
 textarea {
   resize: none;
 }
-
 .container-terms {
-  position: relative;
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
-  width: 423px;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 12px;
 }
+
 .check-input {
   display: none;
 }
@@ -453,6 +475,8 @@ textarea {
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: 0.03em;
+  width: 360px;
+  text-align: left;
 }
 .form-input {
   padding: 8px;
@@ -467,6 +491,7 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;
+  fill: red;
 }
 .form-input:not(:placeholder-shown):required:valid {
   border-color: green;
@@ -670,6 +695,7 @@ textarea {
   padding-bottom: 30px;
   padding-left: 0;
   gap: 10px;
+  border-radius: 50%;
 }
 .icon-team-section-web {
   flex-basis: calc((100% - 90px) / 4);
@@ -683,7 +709,8 @@ textarea {
   justify-content: center;
   width: 44px;
   height: 44px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-radius: 50%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-team:hover,
@@ -804,7 +831,7 @@ textarea {
   cursor: pointer;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-footer-social {
@@ -815,6 +842,7 @@ textarea {
   align-items: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
 }
 .icon-footer-social:hover,
 .icon-footer-social:focus {
@@ -857,14 +885,12 @@ textarea {
   line-height: 1.2;
   line-height: 100%;
   text-align: Left;
-  vertical-align: Top;
   color: var(--primary-white-color);
   text-transform: uppercase;
   width: 275px;
 }
 .content-subscribe {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -878,7 +904,8 @@ textarea {
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
+
+  padding-left: 16px;
 }
 
 .input:not(:placeholder-shown):required:valid {
@@ -901,12 +928,6 @@ textarea {
   line-height: 107%;
   text-align: Left;
 }
-.form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
 
 .button-subscribe {
   position: relative;
@@ -915,34 +936,28 @@ textarea {
   padding: 0;
   border: 0;
   background-color: var(--brand-color);
-  color: var(--primary-white-color);
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  margin-left: 12px;
   cursor: pointer;
+  margin: 0 auto;
+  color: var(--primary-white-color);
 }
 .text-subscribe-button {
-  position: absolute;
-  width: 89px;
-  height: 30px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--primary-white-color);
 }
 
 .icon-subscribe {
   position: absolute;
-  top: 13px;
-  right: 23px;
+  fill: var(--primary-white-color);
+  right: 12px;
 }
 
 .list.portfolio {
